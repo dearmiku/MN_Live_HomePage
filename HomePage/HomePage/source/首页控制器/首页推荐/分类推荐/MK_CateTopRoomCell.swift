@@ -19,7 +19,11 @@ extension MK_CateTopRoomV {
         
         /* 类属性 */
         
+        ///点击分类ID
         static let clickCateID = BehaviorSubject<String?>.init(value: nil)
+        
+        ///房间号点击
+        static let clickRoomID = BehaviorSubject<String?>.init(value: nil)
         
         /********/
         
@@ -45,6 +49,7 @@ extension MK_CateTopRoomV {
         ///直播间1
         lazy var room1 = { () -> MK_CateTopRoomV.LiveRoom in
             let res = LiveRoom()
+            res.addTarget(self, action: #selector(clickRoom(sender:)), for: UIControl.Event.touchUpInside)
             addSubview(res)
             return res
         }()
@@ -52,6 +57,7 @@ extension MK_CateTopRoomV {
         ///直播间2
         lazy var room2 = { () -> MK_CateTopRoomV.LiveRoom in
             let res = LiveRoom()
+            res.addTarget(self, action: #selector(clickRoom(sender:)), for: UIControl.Event.touchUpInside)
             addSubview(res)
             return res
         }()
@@ -59,6 +65,7 @@ extension MK_CateTopRoomV {
         ///直播间3
         lazy var room3 = { () -> MK_CateTopRoomV.LiveRoom in
             let res = LiveRoom()
+            res.addTarget(self, action: #selector(clickRoom(sender:)), for: UIControl.Event.touchUpInside)
             addSubview(res)
             return res
         }()
@@ -66,6 +73,7 @@ extension MK_CateTopRoomV {
         ///直播间4
         lazy var room4 = { () -> MK_CateTopRoomV.LiveRoom in
             let res = LiveRoom()
+            res.addTarget(self, action: #selector(clickRoom(sender:)), for: UIControl.Event.touchUpInside)
             addSubview(res)
             return res
         }()
@@ -129,11 +137,19 @@ extension MK_CateTopRoomV {
                 Item.clickCateID.onNext(res.cateID)
                 
             }).disposed(by: bag)
-        
+            
         }
         
         required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
+        }
+        
+        ///点击直播间
+        @objc func clickRoom(sender:LiveRoom){
+            
+            guard let model = sender.model else {return}
+            
+            Item.clickRoomID.onNext(model.roomIdStr)
         }
         
         

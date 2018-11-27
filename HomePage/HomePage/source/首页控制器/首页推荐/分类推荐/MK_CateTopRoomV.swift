@@ -9,6 +9,7 @@
 import SnapKit
 import RxSwift
 import Base
+import LivingRoom
 
 
 ///分类前四推荐展示
@@ -52,10 +53,34 @@ class MK_CateTopRoomV : UICollectionView {
         self.contentInset = UIEdgeInsets.init(top: 10, left: 0, bottom: 10, right: 0)
         
         
+        ///对内容数组进行订阅
         contentArr.asObserver().subscribe(onNext: {[weak self] (res) in
             
             self?.reloadData()
             self?.CollVlayout.reStareLayout()
+            
+        }).disposed(by: bag)
+        
+        ///对点击分类id 进行订阅
+        Item.clickCateID.subscribe(onNext: {(res) in
+            
+            guard let id = res else {return}
+            
+            let vc = MK_CategoryShowVC.init(cateID: id)
+            
+            MK_HomePageEntranVC.showVC?.pushViewController(vc, animated: true)
+            
+        }).disposed(by: bag)
+        
+        ///对点击房间id进行监听
+        Item.clickRoomID.subscribe(onNext: { (res) in
+            
+            guard let roomID = res,
+                roomID.count != 0 else {return}
+            let vc = MK_LiveRoomVC()
+            vc.roomIdV.onNext(roomID)
+            MK_HomePageEntranVC.showVC?.pushViewController(vc, animated: true)
+            
             
         }).disposed(by: bag)
         
@@ -93,7 +118,6 @@ extension MK_CateTopRoomV : UICollectionViewDelegate,UICollectionViewDataSource 
             cell.backgroundColor = UIColor.clear
             return cell
         }
-        
         
     }
     

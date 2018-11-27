@@ -9,6 +9,7 @@
 import SnapKit
 import LLCycleScrollView
 import RxSwift
+import LivingRoom
 
 
 ///首页推荐轮播器
@@ -18,10 +19,6 @@ class MK_RecommandScrollV : UIView {
     
     ///轮播模型数组
     let showModelArr = BehaviorSubject<[LiveRoomModel]>.init(value: [])
-    
-    ///选中房间号
-    let selectRoomID = BehaviorSubject<String>.init(value: "")
-    
     
     ///轮播控件
     lazy var contentV = { () -> LLCycleScrollView in
@@ -70,9 +67,13 @@ extension MK_RecommandScrollV : LLCycleScrollViewDelegate {
     
     func cycleScrollView(_ cycleScrollView: LLCycleScrollView, didSelectItemIndex index: NSInteger) {
         
-        guard let roomID = (try? showModelArr.value())?[index].roomID else {return}
+        guard let roomID = (try? showModelArr.value())?[index].roomID,
+            roomID.count != 0 else {return}
         
-        selectRoomID.onNext(roomID)
+        let vc = MK_LiveRoomVC()
+        vc.roomIdV.onNext(roomID)
+        
+        MK_HomePageEntranVC.showVC?.pushViewController(vc, animated: true)
     }
     
     

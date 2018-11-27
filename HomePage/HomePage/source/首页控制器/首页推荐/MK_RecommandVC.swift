@@ -56,7 +56,8 @@ class MK_RecommandVC : MK_BaseVC {
         ///将分类推荐信息绑定
         vm.cateRecommandRoomArr.bind(to: cateRecommandV.contentArr).disposed(by: bag)
         
-        
+        ///开始请求数据
         vm.loadNewData()
+        
     }
 }

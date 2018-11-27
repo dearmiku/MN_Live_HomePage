@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import RxSwift
+import Base
 
 class ViewController: UIViewController {
     
@@ -36,11 +37,11 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        //let vc = MK_RecommandVC()
+        let vc = MK_RecommandVC()
         
-        let vc = MK_CategoryShowVC.init(cateID: "g_jdqs")
+        //let vc = MK_CategoryShowVC.init(cateID: "g_jdqs")
         
-        let nvc = UINavigationController.init(rootViewController: vc)
+        let nvc = MK_BaseNavigationVC.init(rootViewController: vc)
         self.present(nvc, animated: true, completion: nil)
     }
 

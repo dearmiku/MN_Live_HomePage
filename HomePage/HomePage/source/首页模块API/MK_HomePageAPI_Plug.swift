@@ -33,7 +33,7 @@ class MK_HomePageAPI_Plug {
             var model = LiveRoomModel()
             
             ///房间号
-            if let roomID = try? item.attr("data-main_id") {
+            if let roomID = try? item.attr("data-id") {
                 model.roomID = roomID
             }
             

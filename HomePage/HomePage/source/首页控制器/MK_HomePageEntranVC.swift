@@ -10,7 +10,7 @@ import Base
 
 
 ///首页入口控制器
-class MK_HomePageEntranVC:MK_BaseNavigationVC {
+class MK_HomePageEntranVC : MK_BaseNavigationVC {
     
     public init(){
         let vc = MK_HomePageVC()
