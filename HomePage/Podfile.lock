@@ -8,6 +8,7 @@ PODS:
   - HandyJSON (4.2.0)
   - Kingfisher (4.6.4)
   - LivingRoom (0.0.1):
+    - Base
     - HandyJSON
     - Kingfisher (~> 4.6.1)
     - Moya (~> 11.0.0)
@@ -33,10 +34,10 @@ PODS:
   - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
-  - Base (from `../Base/Base`)
+  - Base (from `https://github.com/dearmiku/MN_Live_Base.git`)
   - HandyJSON
   - Kingfisher (~> 4.6.1)
-  - LivingRoom (from `../LivingRoom/LivingRoom`)
+  - LivingRoom (from `https://github.com/dearmiku/MN_Live_LiveRoom.git`)
   - LLCycleScrollView (~> 1.5.1)
   - Moya (~> 11.0.0)
   - Moya/RxSwift (~> 11.0)
@@ -60,16 +61,24 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Base:
-    :path: "../Base/Base"
+    :git: https://github.com/dearmiku/MN_Live_Base.git
   LivingRoom:
-    :path: "../LivingRoom/LivingRoom"
+    :git: https://github.com/dearmiku/MN_Live_LiveRoom.git
+
+CHECKOUT OPTIONS:
+  Base:
+    :commit: 0b8a5bd64fb3b3fb2fe98827de59b7f53834a487
+    :git: https://github.com/dearmiku/MN_Live_Base.git
+  LivingRoom:
+    :commit: 844c9fd3b560de1d34c337c796f841d6e482326c
+    :git: https://github.com/dearmiku/MN_Live_LiveRoom.git
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Base: 1e79c04f47bfaf27c36d8e5b24236e8cb2f6ff5b
+  Base: 96877182b011e25bc20a768bd38d8b972cfc6407
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
-  LivingRoom: fbe6857b15b95f3a621552f683764e8eff278977
+  LivingRoom: 22209d51e685d3953b8bd4a5e46308808f2b7200
   LLCycleScrollView: 52c2e96a92b6d16d8e0fe46b6aedb8a320bc846b
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -78,6 +87,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 5578f479ddedf6281554efd0ff052958e3091493
+PODFILE CHECKSUM: 45607636274bfc8b3aa0b6fc1a68434074022cdc
 
 COCOAPODS: 1.6.0.beta.2

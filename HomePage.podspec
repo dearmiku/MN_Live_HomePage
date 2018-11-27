@@ -9,9 +9,9 @@
   s.homepage = 'https://github.com/dearmiku/MN_Live'
   s.source = { :git => '', :tag => s.version.to_s }
 
-  s.resource  = "Search.bundle"
+  s.resource  = "HomePage/HomePage/Search.bundle"
 
-  s.source_files   = "source", "source/**/*.*"
+  s.source_files   = "source", "HomePage/HomePage/source/**/*.*"
 
   s.swift_version = '4.2' 
 
@@ -29,8 +29,9 @@
   s.dependency 'SwiftSoup'                      #HTML解析框架
   s.dependency 'LLCycleScrollView', '~> 1.5.1'  #轮播器
 
-  s.dependency 'Base', :path => '../Base/Base'   #基础
-  s.dependency 'LivingRoom', :path => '../LivingRoom/LivingRoom' #直播间
+  #私有库
+  s.dependency 'Base'                           #基础模块
+  s.dependency 'LivingRoom'                     #直播间模块
 
   end
   

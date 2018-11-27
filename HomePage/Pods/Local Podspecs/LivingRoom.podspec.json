@@ -16,10 +16,10 @@
   },
   "source_files": [
     "source",
-    "source/**/*.*"
+    "LivingRoom/LivingRoom/source/**/*.*"
   ],
-  "vendored_frameworks": "framework/IJK/IJKMediaFramework.framework",
-  "resources": "LivingRoom.bundle",
+  "vendored_frameworks": "LivingRoom/LivingRoom/framework/IJK/IJKMediaFramework.framework",
+  "resources": "LivingRoom/LivingRoom/LivingRoom.bundle",
   "swift_version": "4.2",
   "platforms": {
     "ios": "8.0"
@@ -64,7 +64,7 @@
     "HandyJSON": [
 
     ],
-    "../Base/Base": [
+    "Base": [
 
     ]
   }

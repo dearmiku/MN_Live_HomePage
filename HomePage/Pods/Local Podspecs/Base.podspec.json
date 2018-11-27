@@ -16,7 +16,7 @@
   },
   "source_files": [
     "source",
-    "source/**/*.*"
+    "Base/Base/source/**/*.*"
   ],
   "swift_version": "4.2",
   "platforms": {

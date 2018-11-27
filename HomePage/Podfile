@@ -15,9 +15,9 @@ target 'HomePage' do
     pod 'HandyJSON'                                 #ORM框架
     pod 'LLCycleScrollView', '~> 1.5.1'                             #轮播器封装
     
-    pod 'Base', :path => '../Base/Base'                                 #基础
+    pod 'Base', :git => 'https://github.com/dearmiku/MN_Live_Base.git'                                 #基础
 
-    pod 'LivingRoom', :path => '../LivingRoom/LivingRoom'                                 #直播间
+    pod 'LivingRoom', :git => 'https://github.com/dearmiku/MN_Live_LiveRoom.git'                                 #直播间
     
     
   # Pods for HomePage
