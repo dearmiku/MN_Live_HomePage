@@ -26,6 +26,8 @@
 		0EA7F5FD21A7EB82005FD738 /* MK_CategoryInfoV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7F5FC21A7EB82005FD738 /* MK_CategoryInfoV.swift */; };
 		0EA7F60121A7F016005FD738 /* MK_HomePageEntranVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7F60021A7F016005FD738 /* MK_HomePageEntranVC.swift */; };
 		0EA7F60321A7F489005FD738 /* MK_CategoryShowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7F60221A7F489005FD738 /* MK_CategoryShowVM.swift */; };
+		0EF20F3721AD385000F43DA0 /* MK_HomePageFuncControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F3621AD385000F43DA0 /* MK_HomePageFuncControlBar.swift */; };
+		0EF20F3A21AE2D3500F43DA0 /* MK_HomePageVCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F3921AE2D3500F43DA0 /* MK_HomePageVCContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		0EA7F5FC21A7EB82005FD738 /* MK_CategoryInfoV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_CategoryInfoV.swift; sourceTree = "<group>"; };
 		0EA7F60021A7F016005FD738 /* MK_HomePageEntranVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePageEntranVC.swift; sourceTree = "<group>"; };
 		0EA7F60221A7F489005FD738 /* MK_CategoryShowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_CategoryShowVM.swift; sourceTree = "<group>"; };
+		0EF20F3621AD385000F43DA0 /* MK_HomePageFuncControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePageFuncControlBar.swift; sourceTree = "<group>"; };
+		0EF20F3921AE2D3500F43DA0 /* MK_HomePageVCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePageVCContainer.swift; sourceTree = "<group>"; };
 		4F70D59DBB6648870D9AD47F /* Pods-HomePage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomePage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomePage/Pods-HomePage.debug.xcconfig"; sourceTree = "<group>"; };
 		6A0F7E8549498C24F6F72F12 /* Pods-HomePage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomePage.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomePage/Pods-HomePage.release.xcconfig"; sourceTree = "<group>"; };
 		D37DAB7B96AA60742E7B80EB /* Pods_HomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,8 @@
 			children = (
 				0E93AB3621A5532700803C59 /* MK_HomePageVC.swift */,
 				0EA7F60021A7F016005FD738 /* MK_HomePageEntranVC.swift */,
+				0EF20F3821AE2CEB00F43DA0 /* 首页控制器容器 */,
+				0EF20F3521AD383D00F43DA0 /* 功能分割栏 */,
 				0E93AB3D21A64CCE00803C59 /* 首页推荐 */,
 			);
 			path = "首页控制器";
@@ -172,6 +178,22 @@
 				0EA7F5FC21A7EB82005FD738 /* MK_CategoryInfoV.swift */,
 			);
 			path = "分类详情";
+			sourceTree = "<group>";
+		};
+		0EF20F3521AD383D00F43DA0 /* 功能分割栏 */ = {
+			isa = PBXGroup;
+			children = (
+				0EF20F3621AD385000F43DA0 /* MK_HomePageFuncControlBar.swift */,
+			);
+			path = "功能分割栏";
+			sourceTree = "<group>";
+		};
+		0EF20F3821AE2CEB00F43DA0 /* 首页控制器容器 */ = {
+			isa = PBXGroup;
+			children = (
+				0EF20F3921AE2D3500F43DA0 /* MK_HomePageVCContainer.swift */,
+			);
+			path = "首页控制器容器";
 			sourceTree = "<group>";
 		};
 		C54248E70924D65923DD123C /* Frameworks */ = {
@@ -326,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E93AB4021A64CCE00803C59 /* MK_RecommandScrollV.swift in Sources */,
+				0EF20F3A21AE2D3500F43DA0 /* MK_HomePageVCContainer.swift in Sources */,
 				0EA7F5FA21A7E795005FD738 /* MK_CategoryShowVC.swift in Sources */,
 				0E93AB5021A68E7300803C59 /* MK_RecommandVM.swift in Sources */,
 				0E93AB1D21A5379600803C59 /* ViewController.swift in Sources */,
@@ -334,6 +357,7 @@
 				0E93AB3221A542B000803C59 /* MK_HomePageAPI_Plug.swift in Sources */,
 				0EA7F5F621A7DABF005FD738 /* MK_CateTopRoomV.swift in Sources */,
 				0E93AB4221A64CF700803C59 /* MK_RecommandVC.swift in Sources */,
+				0EF20F3721AD385000F43DA0 /* MK_HomePageFuncControlBar.swift in Sources */,
 				0E93AB3721A5532700803C59 /* MK_HomePageVC.swift in Sources */,
 				0E93AB1B21A5379600803C59 /* AppDelegate.swift in Sources */,
 				0EA7F60321A7F489005FD738 /* MK_CategoryShowVM.swift in Sources */,

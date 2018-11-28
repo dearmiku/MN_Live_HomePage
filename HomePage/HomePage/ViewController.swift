@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let vc = MK_RecommandVC()
+        let vc = MK_HomePageVC()
         
         //let vc = MK_CategoryShowVC.init(cateID: "g_jdqs")
         

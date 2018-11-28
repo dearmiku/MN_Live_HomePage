@@ -7,15 +7,47 @@
 //
 
 import SnapKit
+import Base
 
 
 ///首页控制器
-class MK_HomePageVC: UIViewController {
+class MK_HomePageVC: MK_BaseVC {
+    
+    
+    ///首页功能指示框
+    lazy var indicateV = { () -> MK_HomePageFuncControlBar in
+        let res = MK_HomePageFuncControlBar()
+        view.addSubview(res)
+        return res
+    }()
+    
+    ///首页内容控制器
+    lazy var contentVC = { () -> MK_HomePageContainerVC in
+        let res = MK_HomePageContainerVC.init(
+            transitionStyle: UIPageViewController.TransitionStyle.pageCurl,
+            navigationOrientation: UIPageViewController.NavigationOrientation.horizontal,
+            options: [UIPageViewController.OptionsKey.spineLocation:NSNumber.init(value: UIPageViewController.SpineLocation.min.rawValue)]
+            )
+        view.addSubview(res.view)
+        return res
+    }()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.isShowNavigationBar = false
+        
+        indicateV.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(MK_Device.navigationBarHight)
+        }
+        contentVC.view.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(indicateV.snp.bottom)
+        }
+        
     }
     
 }
