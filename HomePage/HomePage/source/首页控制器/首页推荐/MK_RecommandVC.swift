@@ -39,7 +39,7 @@ class MK_RecommandVC : MK_BaseVC {
         self.isShowNavigationBar = false
         
         recommandV.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(MK_Device.safeArre.top)
+            make.top.equalToSuperview()
             make.left.right.equalToSuperview()
             make.height.equalTo(ScreenWidth*1/2)
         }

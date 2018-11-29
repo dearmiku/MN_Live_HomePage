@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         
         let nvc = MK_BaseNavigationVC.init(rootViewController: vc)
         self.present(nvc, animated: true, completion: nil)
+       
     }
-
 }
 

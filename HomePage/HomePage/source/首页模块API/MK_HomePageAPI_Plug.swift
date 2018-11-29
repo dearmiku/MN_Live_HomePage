@@ -258,4 +258,46 @@ class MK_HomePageAPI_Plug {
     }
     
     
+    ///对全部分类数据进行解析
+    static func analyAllCategoryDataSwith(str:String)->[MK_HomePage_AllCateContentV.Model]{
+     
+        guard let doc = try? SwiftSoup.parse(str) else {
+            return []
+        }
+        
+        ///获取分类元素数组
+        guard let CateArrEls = try? doc.getElementsByClass("unit ") else {
+            return []
+        }
+        
+        var modelArr:[MK_HomePage_AllCateContentV.Model] = []
+        
+        ///遍历分类数组
+        for item in CateArrEls.array(){
+            
+            var model = MK_HomePage_AllCateContentV.Model()
+            
+            ///分类名称
+            if let cateName = try? item.select("p").text(){
+                model.cateNameStr = cateName
+            }
+            
+            ///分类id
+            if let cateId = try? item.select("a").attr("href"){
+                let resCateId = (cateId as NSString).replacingOccurrences(of: "/", with: "")
+                model.cateId = resCateId
+            }
+            
+            ///分类示意图
+            if let cateImStr = try? item.select("img").attr("data-original") {
+                model.imURLStr = cateImStr
+            }
+            
+            modelArr.append(model)
+        }
+        return modelArr
+        
+    }
+    
+    
 }

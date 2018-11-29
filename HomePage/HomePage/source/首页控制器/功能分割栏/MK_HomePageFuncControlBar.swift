@@ -66,6 +66,46 @@ class MK_HomePageFuncControlBar : UIView {
             make.right.equalToSuperview().offset(-12)
         }
         
+        ///对状态进行监听
+        state.subscribe(onNext: {[weak self] (res) in
+            
+            guard let sf = self else {return}
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                switch res {
+                    
+                case .allCate:
+                    sf.cateLa.font = UIFont.systemFont(ofSize: 14)
+                    sf.cateLa.textColor = UIColor.black
+                    sf.homePageLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.homePageLa.textColor = UIColor.gray
+                    sf.allLiveLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.allLiveLa.textColor = UIColor.gray
+                    
+                    break
+                case .homePageRecommand:
+                    sf.homePageLa.font = UIFont.systemFont(ofSize: 14)
+                    sf.homePageLa.textColor = UIColor.black
+                    sf.cateLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.cateLa.textColor = UIColor.gray
+                    sf.allLiveLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.allLiveLa.textColor = UIColor.gray
+
+                    
+                    break
+                case .allLive:
+                    sf.allLiveLa.font = UIFont.systemFont(ofSize: 14)
+                    sf.allLiveLa.textColor = UIColor.black
+                    sf.cateLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.cateLa.textColor = UIColor.gray
+                    sf.homePageLa.font = UIFont.systemFont(ofSize: 12)
+                    sf.homePageLa.textColor = UIColor.gray
+                    break
+                }
+            })
+            
+        }).disposed(by: bag)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,16 +119,16 @@ class MK_HomePageFuncControlBar : UIView {
 extension MK_HomePageFuncControlBar {
     
     ///状态
-    enum State {
+    enum State:Int {
         
         ///分类
-        case allCate
+        case allCate = 0
         
         ///首页
-        case homePageRecommand
+        case homePageRecommand = 1
         
         ///全部直播
-        case allLive
+        case allLive = 2
     }
     
 }

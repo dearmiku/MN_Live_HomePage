@@ -48,6 +48,15 @@ class MK_HomePageVC: MK_BaseVC {
             make.top.equalTo(indicateV.snp.bottom)
         }
         
+        ///将内容控制器下标与指示器绑定
+        contentVC.currentIndex.filter { (res) -> Bool in
+            return (0 <= res && res < 3)
+            }.map { (res) -> MK_HomePageFuncControlBar.State in
+                return MK_HomePageFuncControlBar.State.init(rawValue: res)!
+        }.bind(to: indicateV.state).disposed(by: bag)
+        
+        
+        
     }
     
 }

@@ -17,6 +17,9 @@ enum MK_HomePageTarget {
     ///首页推荐信息
     case home_recommand
     
+    ///全部分类信息
+    case allCategory
+    
     ///分类详情信息(分类ID)
     case categoryInfo(String)
     
@@ -43,6 +46,9 @@ extension MK_HomePageTarget : TargetType {
             
         case let .categoryInfo(cateID):
             return cateID
+            
+        case .allCategory:
+            return "directory"
         }
     }
     
@@ -53,6 +59,9 @@ extension MK_HomePageTarget : TargetType {
             return .get
             
         case .categoryInfo(_):
+            return .get
+            
+        case .allCategory:
             return .get
         }
     }
@@ -68,6 +77,9 @@ extension MK_HomePageTarget : TargetType {
             return Task.requestParameters(parameters: [:], encoding: URLEncoding.default)
             
         case .categoryInfo(_):
+            return Task.requestParameters(parameters: [:], encoding: URLEncoding.default)
+            
+        case .allCategory:
             return Task.requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
