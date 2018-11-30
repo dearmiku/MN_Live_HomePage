@@ -18,7 +18,7 @@ class MK_HomePageContainerVC : UIPageViewController {
     lazy var vcArr:[UIViewController] = [
         MK_HomePage_AllCateVC(),    ///全部分类
         MK_RecommandVC(),           ///首页推荐
-        MK_RecommandVC(),
+        MK_HomePage_AllLiveVC(),    ///全部直播
         ]
     
     ///当前控制器下标

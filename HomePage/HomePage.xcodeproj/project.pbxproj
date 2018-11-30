@@ -32,6 +32,7 @@
 		0EF20F4021AE415000F43DA0 /* MK_HomePage_AllLiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F3F21AE415000F43DA0 /* MK_HomePage_AllLiveVC.swift */; };
 		0EF20F5921AFB4E700F43DA0 /* MK_HomePage_AllCateContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F5821AFB4E700F43DA0 /* MK_HomePage_AllCateContentV.swift */; };
 		0EF20F5B21AFCA1500F43DA0 /* MK_HomePage_AllCateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F5A21AFCA1500F43DA0 /* MK_HomePage_AllCateVM.swift */; };
+		0EF20F5D21AFE25600F43DA0 /* MK_HomePage_AllLiveVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF20F5C21AFE25600F43DA0 /* MK_HomePage_AllLiveVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		0EF20F3F21AE415000F43DA0 /* MK_HomePage_AllLiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePage_AllLiveVC.swift; sourceTree = "<group>"; };
 		0EF20F5821AFB4E700F43DA0 /* MK_HomePage_AllCateContentV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePage_AllCateContentV.swift; sourceTree = "<group>"; };
 		0EF20F5A21AFCA1500F43DA0 /* MK_HomePage_AllCateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePage_AllCateVM.swift; sourceTree = "<group>"; };
+		0EF20F5C21AFE25600F43DA0 /* MK_HomePage_AllLiveVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_HomePage_AllLiveVM.swift; sourceTree = "<group>"; };
 		4F70D59DBB6648870D9AD47F /* Pods-HomePage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomePage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomePage/Pods-HomePage.debug.xcconfig"; sourceTree = "<group>"; };
 		6A0F7E8549498C24F6F72F12 /* Pods-HomePage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomePage.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomePage/Pods-HomePage.release.xcconfig"; sourceTree = "<group>"; };
 		D37DAB7B96AA60742E7B80EB /* Pods_HomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF20F3F21AE415000F43DA0 /* MK_HomePage_AllLiveVC.swift */,
+				0EF20F5C21AFE25600F43DA0 /* MK_HomePage_AllLiveVM.swift */,
 			);
 			path = "全部直播";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				0EF20F3E21AE413A00F43DA0 /* MK_HomePage_AllCateVC.swift in Sources */,
 				0EF20F3A21AE2D3500F43DA0 /* MK_HomePageVCContainer.swift in Sources */,
 				0EA7F5FA21A7E795005FD738 /* MK_CategoryShowVC.swift in Sources */,
+				0EF20F5D21AFE25600F43DA0 /* MK_HomePage_AllLiveVM.swift in Sources */,
 				0E93AB5021A68E7300803C59 /* MK_RecommandVM.swift in Sources */,
 				0EF20F5921AFB4E700F43DA0 /* MK_HomePage_AllCateContentV.swift in Sources */,
 				0E93AB1D21A5379600803C59 /* ViewController.swift in Sources */,

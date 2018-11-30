@@ -33,7 +33,9 @@ class MK_HomePage_AllCateVC : MK_BaseVC {
         ///将vm数据源绑定
         vm.modelArr.bind(to: contentV.modelArr).disposed(by: bag)
         
-        vm.loadData()
+        OperationQueue.main.addOperation {
+            self.vm.loadData()
+        }
         
     }
     
